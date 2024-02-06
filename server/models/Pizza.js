@@ -1,4 +1,6 @@
-const { Schema, Model } = require('mongoose');
+const mongoose = require('mongoose')
+const { Schema, model } = mongoose;
+const Order = require('./Order');
 
 const pizzaSchema = new Schema({
     name: {
@@ -16,8 +18,9 @@ const pizzaSchema = new Schema({
         type: Number,
         required: true
     },
+    order: [Order.schema]
 });
 
-const Pizza = Model('Pizza', pizzaSchema);
+const Pizza = mongoose.model('Pizza', pizzaSchema);
 
 module.exports = Pizza;

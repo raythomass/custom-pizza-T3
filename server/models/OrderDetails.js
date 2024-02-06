@@ -1,13 +1,14 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose')
+const { Schema, model } = mongoose;
 
 const orderDetailsSchema = new Schema({
     order: { 
-        type: mongoose.Schema.Types.ObjectId, 
+        type: Schema.Types.ObjectId, 
         ref: 'Order', 
         required: true 
     },
     pizza: [{ 
-        type: mongoose.Schema.Types.ObjectId, 
+        type: Schema.Types.ObjectId, 
         ref: 'Pizza', 
         required: true 
     }],
@@ -21,6 +22,6 @@ const orderDetailsSchema = new Schema({
     },
 });
   
-const OrderDetails = model('OrderDetails', orderDetailsSchema);
+const OrderDetails = mongoose.model('OrderDetails', orderDetailsSchema);
  
 module.exports = OrderDetails;
