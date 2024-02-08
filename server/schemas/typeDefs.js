@@ -27,7 +27,7 @@ const typeDefs = `
 
     type OrderDetails {
         order: ID!
-        pizza: ID!
+        pizza: [Pizza]
         quantity: Int!
         subtotal: Int!
     }
@@ -43,6 +43,34 @@ const typeDefs = `
         details: [OrderDetails]
         me: User
         savedOrder (id:ID!): Order
+    }
+
+    type Mutation {
+        login(
+            email: String
+            password: String
+        ): Auth
+        addUser(
+            username: String!
+            email: String!
+            password: String!
+            address: String!
+            phoneNumber: String!
+        ): Auth
+        updateUser(
+            username: String!
+            email: String!
+            password: String!
+            address: String!
+            phoneNumber: String!
+        ): User
+        addPizza(
+            name: String
+            description: String
+        ): Pizza
+        addOrder(
+            savedOrderDetails: [ID]!
+        ): Order
     }
 
 `

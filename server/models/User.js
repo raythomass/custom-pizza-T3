@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const { Schema, model } = mongoose;
 const Order = require('./Order')
+const bcrypt = require('bcrypt')
 
 const userSchema = new Schema({
     username: {
@@ -30,6 +31,10 @@ const userSchema = new Schema({
     },
     savedOrders: [Order.schema]
 });
+
+// userSchema.methods.isCorrectPassword = async function (password) {
+//     await bcrypt.compare(password, this.password);
+//   };
 
 const User = mongoose.model('User', userSchema);
 
