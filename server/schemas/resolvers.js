@@ -33,7 +33,8 @@ const resolvers = {
     Mutation: {
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-
+            
+            console.log('Did I make it here?')
             if (!user) {
                 throw AuthenticationError;
             }

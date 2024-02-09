@@ -10,7 +10,7 @@ const Header = ({ totalCost }) => {
   return (
     <header className="header">
       <div className="header-logo">
-        
+        {/*TODO: add logo here */}
       </div>
       <nav className="header-nav">
         <ul>
@@ -18,10 +18,11 @@ const Header = ({ totalCost }) => {
           <li><a href="/menu">Menu</a></li>
           <li><a href="/about">About Us</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Login</a></li>
         </ul>
       </nav>
       <div className="header-actions">
-        <button className="header-signin">Sign In</button>
+        {/* <button className="header-signin" onClick={LoginPage}>Sign In</button> */}
         <div className="header-total-cost">Total: ${totalCost.toFixed(2)}</div>
       </div>
     </header>
