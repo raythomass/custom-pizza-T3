@@ -8,9 +8,16 @@ const orderSchema = new Schema({
         ref: 'User',
         required: true
     },
+    pizza: [{ 
+        type: Schema.Types.ObjectId, 
+        ref: 'Pizza', 
+    }],
     status: {
         type: String,
         default: 'pending'
+    },
+    quantity: {
+        type: String,
     },
     totalAmount: {
         type: Number,
@@ -20,7 +27,6 @@ const orderSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    savedOrderDetails: [OrderDetails.schema]
 });
 
 const Order = mongoose.model('Order', orderSchema);
