@@ -9,10 +9,10 @@ const Header = ({ totalCost }) => {
   };
   return (
     <header className="header">
-      <div className="header__logo">
+      <div className="header-logo">
         
       </div>
-      <nav className="header__nav">
+      <nav className="header-nav">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/menu">Menu</a></li>
@@ -20,9 +20,9 @@ const Header = ({ totalCost }) => {
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
-      <div className="header__actions">
-        <button className="header__signin">Sign In</button>
-        <div className="header__total-cost">Total: ${totalCost.toFixed(2)}</div>
+      <div className="header-actions">
+        <button className="header-signin">Sign In</button>
+        <div className="header-total-cost">Total: ${totalCost.toFixed(2)}</div>
       </div>
     </header>
   );
