@@ -40,3 +40,51 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header__logo img {
+  width: 100px;
+}
+
+.header__nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header__nav ul li:last-child {
+  margin-right: 0;
+}
+
+.header__nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.header__actions .header__signin {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__total-cost {
+  font-weight: bold;
+}
