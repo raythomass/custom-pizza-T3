@@ -4,16 +4,10 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 const resolvers = {
     Query: {
         user: async (parent, args, context) => {
-            return await User.findOne({}).populate('savedOrders').populate({
-                path: 'savedOrders',
-                populate: 'savedOrderDetails'
-            })
+            return await User.find({}).populate('savedOrders')
         },
         order: async (parent, args, context) => {
-            return await Order.findOne({}).populate('savedOrderDetails')
-        },
-        details: async (parents, args, context) => {
-            return await OrderDetails.findOne({})
+            return await Order.find({}).populate('savedOrderDetails')
         },
         me: async (parent, args, context) => {
             if (context.user) {
@@ -23,10 +17,7 @@ const resolvers = {
         },
         savedOrder: async (parents, args, context) => {
             if (context.user) {
-                return await User.findById(args.id).populate('savedOrders').populate({
-                    path: 'savedOrders',
-                    populate: 'savedOrderDetails'
-                })
+                return await User.findById(args.id).populate('savedOrders')
             }
         }
     },
@@ -61,28 +52,14 @@ const resolvers = {
                 });
               }
         
-              throw AuthenticationError;s
-        
-        },
-        addOrder: async (parent, {savedOrderDetails}, context) => {
-            if (context.user) {
-                const order = new Order({savedOrderDetails});
-        
-                await User.findByIdAndUpdate(context.user.id, {
-                  $push: { savedOrders: order },
-                });
-              }
-        
               throw AuthenticationError;
         },
         addPizza: async (parent, { name, description }, context) => {
-            if(context.user){
-                const pizza = new Pizza({ name, description })
+            const pizza = new Pizza({ name, description })
 
-                return OrderDetails.findByIdAndUpdate( context.user.id, {
-                    $push: { pizza: pizza}
-                })
-            }
+            return await Order.create({
+                $push: {pizza: pizza}
+            })
         }
     }
 

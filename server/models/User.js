@@ -32,9 +32,9 @@ const userSchema = new Schema({
     savedOrders: [Order.schema]
 });
 
-// userSchema.methods.isCorrectPassword = async function (password) {
-//     await bcrypt.compare(password, this.password);
-//   };
+userSchema.methods.isCorrectPassword = async function (password) {
+    await bcrypt.compare(password, this.password);
+  };
 
 const User = mongoose.model('User', userSchema);
 

@@ -2,6 +2,7 @@
 
 const typeDefs = `
     type User {
+        _id: ID!
         username: String!
         email: String!
         password: String!
@@ -13,23 +14,16 @@ const typeDefs = `
     type Pizza {
         name: String!
         description: String!
-        price: Int
-        order: Order
+        price: Int!
     }
 
     type Order {
         user: ID!
+        pizza: [Pizza]
         status: String
+        quantity: String
         totalAmount: Int!
         orderDate: String
-        savedOrderDetails: OrderDetails
-    }
-
-    type OrderDetails {
-        order: ID!
-        pizza: [Pizza]
-        quantity: Int!
-        subtotal: Int!
     }
 
     type Auth {
@@ -40,7 +34,6 @@ const typeDefs = `
     type Query {
         user: [User]
         order: [Order]
-        details: [OrderDetails]
         me: User
         savedOrder (id:ID!): Order
     }
@@ -67,9 +60,6 @@ const typeDefs = `
         addPizza(
             name: String
             description: String
-        ): Pizza
-        addOrder(
-            savedOrderDetails: [ID]!
         ): Order
     }
 
