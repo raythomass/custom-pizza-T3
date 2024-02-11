@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Delivery details section */
+.delivery-details {
+    flex-basis: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-details h2 {
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.delivery-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.delivery-details input[type="text"],
+.delivery-details input[type="tel"],
+.delivery-details textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.delivery-details button[type="submit"] {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delivery-details button[type="submit"]:hover {
+    background-color: #e64a19;
+}
+
+/* Order summary section */
+.order-summary {
+    flex-basis: 35%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-summary li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.order-summary li:last-child {
+    border-bottom: none;
+}
+
+.order-summary li p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn-edit-cart,
+.btn-place-order {
+    display: block;
+    width: 100%;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-cart:hover,
+.btn-place-order:hover {
+    background-color: #e64a19;
+}
