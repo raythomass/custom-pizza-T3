@@ -13,10 +13,10 @@ const Header = ({ totalCost }) => {
           <h1>Custom Pizza</h1>
           <nav>
               <ul>
-                  <li><a href="#about">About</a></li>
-                  <Link to='/menu'>Menu</Link>
-                  <li><a href="#contact">Contact</a></li>
-                  <Link to="/login">Login</Link>
+                <Link to='/menu'>Menu</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/contact'>Contact Us</Link>
+                <Link to="/login">Login</Link>
               </ul>
           </nav>
       </div>

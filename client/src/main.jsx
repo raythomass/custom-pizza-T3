@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from './pages/Home';
 import Login from './components/Login/Login.jsx'
 import Menu from './components/Menu/Menu.jsx';
+import AboutUs from './pages/About/AboutUs.jsx'
 import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/menu',
         element: <Menu />
+      },
+      {
+        path: '/about',
+        element: <AboutUs />
       }
     ]
   },
