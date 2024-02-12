@@ -42,7 +42,6 @@ const Login = (props) => {
 
   return (
     <div className="login-container">
-      <h1>User Authentication</h1>
       { data ? (
         <p>
           Success! You may now head{' '}

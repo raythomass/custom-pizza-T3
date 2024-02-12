@@ -1,9 +1,9 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -33,25 +33,6 @@
   }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  min-height: 100vh;
-}
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.justify-flex-start {
-  justify-content: flex-start;
-}
-
-/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -109,6 +90,16 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
+.link {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
 .btn {
   display: inline-block;
   background-color: #ff5722;
@@ -149,59 +140,73 @@ footer p {
   font-size: 14px;
 }
 
-/* About US CSS */
-.about-body {
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form CSS */
+
+
+.login-body {
   font-family: Arial, sans-serif;
+  background-image: url(''); 
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
 }
 
-.about-header {
-  background-color: #4caf50;
-  color: white;
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
+  background-color: transparent; 
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.about-header-nav-ul {
-  list-style: none;
-  padding: 0;
+.form-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.about-header-nav-ul-li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.about-main {
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.7); 
   padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-.about-section {
-  margin-bottom: 40px;
-}
-
-.team-member {
+.auth-form h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.team-member img {
-  width: 150px;
-  border-radius: 50%;
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 10px;
-}
-
-.testimonial {
-  background-color: #fff;
-  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
-.testimonial cite {
-  display: block;
-  text-align: right;
-  margin-top: 10px;
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
 }

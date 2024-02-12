@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 
+import './signup.css';
 import Auth from '../../utils/auth';
 
 const Signup = () => {
@@ -47,50 +48,54 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit} id="register-form" className="auth-form">
-                 <h2>Register</h2>
-                <input 
-                  type="text" 
-                  name="username" 
-                  placeholder="Username" 
-                  required
-                  onChange={handleChange}
-                  value={formState.username} 
-                 />
-                <input 
-                 type="email" 
-                 name="email" 
-                 placeholder="Email" 
-                 required 
-                 onChange={handleChange}
-                 value={formState.email} 
-                 />
-                <input 
-                  type="password" 
-                  name="password" 
-                  placeholder="Password" 
-                  required 
-                  onChange={handleChange}
-                  value={formState.password} 
-                />
-                <input 
-                  type="text" 
-                  name="address" 
-                  placeholder="Address" 
-                  required 
-                  onChange={handleChange}
-                  value={formState.address}
-                />
-                <input 
-                  type="text" 
-                  name="phoneNumber" 
-                  placeholder="Phone Number" 
-                  required 
-                  onChange={handleChange}
-                  value={formState.phoneNumber}
-                />
-                <button type="submit">Register</button>
-             </form>
+              <div className='signup-container'>
+                <div className='form-container'>
+                  <form onSubmit={handleFormSubmit} className="auth-form" id='register-form' >
+                    <h2>Register</h2>
+                    <input 
+                      type="text" 
+                      name="username" 
+                      placeholder="Username" 
+                      required
+                      onChange={handleChange}
+                      value={formState.username} 
+                    />
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    required 
+                    onChange={handleChange}
+                    value={formState.email} 
+                    />
+                    <input 
+                      type="password" 
+                      name="password" 
+                      placeholder="Password" 
+                      required 
+                      onChange={handleChange}
+                      value={formState.password} 
+                    />
+                    <input 
+                      type="text" 
+                      name="address" 
+                      placeholder="Address" 
+                      required 
+                      onChange={handleChange}
+                      value={formState.address}
+                    />
+                    <input 
+                      type="text" 
+                      name="phoneNumber" 
+                      placeholder="Phone Number" 
+                      required 
+                      onChange={handleChange}
+                      value={formState.phoneNumber}
+                    />
+                    <button type="submit">Register</button>
+                </form>
+              </div>
+             </div>
             )}
 
             {error && (
