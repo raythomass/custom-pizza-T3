@@ -1,6 +1,7 @@
 const db = require('./connection');
 const { User, Pizza, OrderDetails, Order } = require('../models');
 const cleanDB = require('./cleanDB');
+const bcrypt = require('bcrypt');
 
 db.once('open', async () => {
   await cleanDB('Order', 'orders');
@@ -11,7 +12,7 @@ db.once('open', async () => {
   await User.create({
     username: 'raythomas',
     email: 'ray@testmail.com',
-    password: 'password12345',
+    password: '1234password',
     address: '1234 Park Ave',
     phoneNumber: '1234567890'
   });
