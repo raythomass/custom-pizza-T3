@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
+import { useStoreContext } from '../../utils/GlobalState';
 
-const Header = ({ totalCost }) => {
+
+const Header = () => {
+  const [state, dispatch] = useStoreContext();
+  const { cart } = state;
+  const cartCount = cart.length;
+
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -25,7 +31,7 @@ const Header = ({ totalCost }) => {
                     <Link className='link btn-lg btn-info m-2' to="/signup">Signup</Link>
                   </>
                 )}
-                <Link to="/cart" id="cart-link">Cart 🛒(<span id="cart-count">0</span>) </Link>
+                <Link to="/cart" id="cart-link">Cart 🛒(<span id="cart-count">{cartCount}</span>) </Link>
               </ul>
           </nav>
       </div>
