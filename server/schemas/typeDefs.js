@@ -14,7 +14,7 @@ const typeDefs = `
     type Pizza {
         name: String!
         description: String!
-        price: Int!
+        price: Float!
     }
 
     type Order {
@@ -36,6 +36,7 @@ const typeDefs = `
         order: [Order]
         me: User
         savedOrder (id:ID!): Order
+        pizza: [Pizza]
     }
 
     type Mutation {

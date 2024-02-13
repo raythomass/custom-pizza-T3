@@ -19,18 +19,22 @@ const resolvers = {
             if (context.user) {
                 return await User.findById(args.id).populate('savedOrders')
             }
+        },
+        pizza: async (parent, args, context) => {
+            console.log('here')
+            return await Pizza.find()
         }
     },
     Mutation: {
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-
+            
             if (!user) {
                 throw AuthenticationError;
             }
 
             const correctPw = await user.isCorrectPassword(password);
-
+            
             if (!correctPw) {
                 throw AuthenticationError;
             }
