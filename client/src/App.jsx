@@ -11,7 +11,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import { CartProvider } from './utils/GlobalState';
+import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -41,7 +41,7 @@ function App() {
   const totalCost = 0;
   return (
     <ApolloProvider client={client}>
-      <CartProvider>
+      <StoreProvider>
       <div className="flex-column justify-flex-start min-100-vh">
         <Header totalCost={totalCost}/>
         <div className="container">
@@ -49,7 +49,7 @@ function App() {
         </div>
         <Footer />
       </div>
-      </CartProvider>
+      </StoreProvider>
     </ApolloProvider>
   );
 }

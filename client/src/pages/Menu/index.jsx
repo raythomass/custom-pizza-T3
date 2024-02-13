@@ -1,22 +1,21 @@
 import { useQuery } from '@apollo/client';
 import './menu.css'
 
-import { useCartContext } from '../../utils/GlobalState';
 import { QUERY_PIZZAS } from '../../utils/queries';
+import { useStoreContext } from '../../utils/GlobalState';
 
 const Menu = () => {
-    const { state, dispacth } = useCartContext();
+    const [state, dispatch] = useStoreContext();
+    const { cart } = state;
 
     const { loading, data } = useQuery(QUERY_PIZZAS);
     const pizzaItems = data?.pizza || [];
     
     const addToCart = () => {
-        console.log(state)
-        return {
-            ...state,
-            cartOpen: true,
-            cart: [...state.cart],
-          };
+        dispatch({
+            type: 'ADD_TO_CART',
+            cart: { ...pizza },
+        });
     }
     
     return (
