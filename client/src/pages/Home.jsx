@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -23,7 +23,7 @@ const Home = () => {
           <div className="container">
               <h2>Our Menu</h2>
               <p>Explore our delicious selection of pizzas and customize them to your liking.</p>
-              <a href="customize.html" className="btn">Customize Your Pizza</a>
+              <Link to="/menu" className="btn">Customize Your Pizza</Link>
           </div>
       </section>
 
@@ -31,7 +31,8 @@ const Home = () => {
           <div className="container">
               <h2>Contact Us</h2>
               <p>Have questions or feedback? Reach out to us and we'll get back to you as soon as possible.</p>
-              <a href="contact.html" className="btn">Get in Touch</a>
+              <Link to="/contact" className="btn">Get in Touch</Link>
+              
           </div>
       </section>
     </div>

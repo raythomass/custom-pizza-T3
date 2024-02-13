@@ -25,6 +25,7 @@ const Header = ({ totalCost }) => {
                     <Link className='link btn-lg btn-info m-2' to="/signup">Signup</Link>
                   </>
                 )}
+                <Link to="/cart" id="cart-link">Cart 🛒(<span id="cart-count">0</span>) </Link>
               </ul>
           </nav>
       </div>

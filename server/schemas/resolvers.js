@@ -19,6 +19,10 @@ const resolvers = {
             if (context.user) {
                 return await User.findById(args.id).populate('savedOrders')
             }
+        },
+        pizza: async (parent, args, context) => {
+            console.log('here')
+            return await Pizza.find()
         }
     },
     Mutation: {

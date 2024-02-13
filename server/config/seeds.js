@@ -25,6 +25,18 @@ db.once('open', async () => {
     phoneNumber: '0987654321'
   });
 
+  await Pizza.create({  
+    name: 'Margherita Pizza',
+    description: 'Classic pizza with tomato sauce, mozzarella cheese, and fresh basil',
+    price: 10.99
+  });
+
+  await Pizza.create({
+    name: 'Pepperoni Pizza',
+    description: 'Delicious pizza with pepperoni, tomato sauce, and mozzarella cheese',
+    price: 12.99
+  });
+
   console.log('users seeded');
 
   process.exit();
