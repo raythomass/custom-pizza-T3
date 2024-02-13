@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import './menu.css'
+import Auth from '../../utils/auth';
 
 import { ADD_TO_CART } from '../../utils/actions';
 import { QUERY_PIZZAS } from '../../utils/queries';
@@ -14,10 +15,15 @@ function Menu() {
     const pizzaItems = data?.pizza || [];
     
     const addToCart = (pizza) => {
-        dispatch({
-            type: ADD_TO_CART,
-            cart: { ...pizza },
-        });
+        if (!Auth.loggedIn()) {
+            window.alert('Please log in to add to cart');
+        }
+        else {
+            dispatch({
+                type: ADD_TO_CART,
+                cart: { ...pizza },
+            });
+        }
     }
     
     return (

@@ -24,14 +24,14 @@ const Header = () => {
                 <Link className='link btn-lg btn-info m-2' to='/about'>About</Link>
                 <Link className='link btn-lg btn-info m-2' to='/contact'>Contact Us</Link>
                 {Auth.loggedIn() ? (
-                  <button  onClick={logout} className='btn btn-lg btn-info m-2'> Logout </button>
+                  <button  onClick={logout} className='link btn-lg btn-info m-2'> Logout </button>
                 ) : (
                   <>
                     <Link className='link btn-lg btn-info m-2' to="/login">Login</Link>
                     <Link className='link btn-lg btn-info m-2' to="/signup">Signup</Link>
                   </>
                 )}
-                <Link to="/cart" id="cart-link">Cart 🛒(<span id="cart-count">{cartCount}</span>) </Link>
+                <Link to="/cart" className="link btn-lg btn-info m-2" id="cart-link">Cart 🛒(<span id="cart-count">{cartCount}</span>) </Link>
               </ul>
           </nav>
       </div>
