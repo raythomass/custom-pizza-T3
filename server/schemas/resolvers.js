@@ -7,13 +7,15 @@ const resolvers = {
             return await User.find({}).populate('savedOrders')
         },
         order: async (parent, args, context) => {
-            return await Order.find({}).populate('savedOrderDetails')
+            return await Order.find({})
         },
         me: async (parent, args, context) => {
-            if (context.user) {
-                return await User.findOne({ _id: context.user._id})
-            }
-            return AuthenticationError
+            // if (context.user) {
+            //     return await User.findbyId({ _id: context.user._id})
+            // }
+            // return AuthenticationError
+
+            return await User.findById(args)
         },
         savedOrder: async (parents, args, context) => {
             if (context.user) {
@@ -60,13 +62,18 @@ const resolvers = {
         },
         addPizza: async (parent, { name, description }, context) => {
             const pizza = new Pizza({ name, description })
+            console.log(pizza)
 
-            return await Order.create({
-                $push: {pizza: pizza}
-            })
-        }
+            return await Order.create(
+                { $addToSet: {pizzas: pizza} }
+                )
+        },
     }
 
 };
+
+// TODO
+// order create and then update
+// rfind ordr by id and then add to set
 
 module.exports = resolvers;

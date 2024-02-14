@@ -6,9 +6,9 @@ const orderSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        //  required: true
     },
-    pizza: [{ 
+    pizzas: [{ 
         type: Schema.Types.ObjectId, 
         ref: 'Pizza', 
     }],
@@ -21,7 +21,7 @@ const orderSchema = new Schema({
     },
     totalAmount: {
         type: Number,
-        required: true
+        // required: true
     },
     orderDate: {
         type: Date,

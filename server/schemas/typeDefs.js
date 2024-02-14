@@ -2,28 +2,35 @@
 
 const typeDefs = `
     type User {
-        _id: ID!
-        username: String!
-        email: String!
-        password: String!
-        address: String!
-        phoneNumber: String!
+        _id: ID
+        username: String
+        email: String
+        password: String
+        address: String
+        phoneNumber: String
         savedOrders: [Order]
     }
 
     type Pizza {
-        name: String!
-        description: String!
-        price: Float!
+        _id: ID
+        name: String
+        description: String
+        price: Float
     }
 
     type Order {
-        user: ID!
-        pizza: [Pizza]
+        _id: ID
+        user: ID
+        pizzas: [Pizza]
         status: String
         quantity: String
-        totalAmount: Int!
+        totalAmount: Int
         orderDate: String
+    }
+
+    input PizzaType {
+        name: String
+        description: String
     }
 
     type Auth {
@@ -34,7 +41,7 @@ const typeDefs = `
     type Query {
         user: [User]
         order: [Order]
-        me: User
+        me (_id: ID!): User
         savedOrder (id:ID!): Order
         pizza: [Pizza]
     }
