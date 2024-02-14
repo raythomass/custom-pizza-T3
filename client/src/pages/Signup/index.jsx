@@ -36,7 +36,7 @@ const Signup = () => {
 
       Auth.login(data.addUser.token);
     } catch (e) {
-      console.error(e);
+      window.alert('An account with this email or username already exists. Please log in.');
     }
   };
 
