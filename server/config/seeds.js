@@ -4,16 +4,54 @@ const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
   await cleanDB('Order', 'orders');
-  await cleanDB('OrderDetails', 'orderDetails');
   await cleanDB('User', 'users');
   await cleanDB('Pizza', 'pizzas');
+
+  const pizzas = await Pizza.insertMany([
+    {
+      name: 'Cheese Pizza',
+      description:
+        'A timeless classic made with artisan dough, classic red sauce, and a homemade blend of cheeses',
+      price: 7.99,
+    },
+    {
+      name: 'Pepproni Pizza',
+      description:
+        'The most popular pizza for a reason. Handcrafted with premium pepperoni',
+      price: 9.99,
+    },
+    {
+      name: 'Sausage PIzza',
+      description:
+        'Premium italian sausage mixed with our homemade blend of cheeses',
+      price: 9.99,
+    },
+    {
+      name: 'Mushroom Pizza',
+      description:
+        'Mushrooms stacked on top of artisan dough a collection of cheeses',
+      price: 9.99,
+    },
+    {
+      name: 'Ham and Pineapple Pizza',
+      description:
+        "You either love it or hate it, but it's here to stay. Ham and Pineapple mixed with our classic red sauce.",
+      price: 9.99,
+    },
+  ]);
+  console.log('pizzas seeded');
 
   await User.create({
     username: 'raythomas',
     email: 'ray@testmail.com',
     password: 'password12345',
     address: '1234 Park Ave',
-    phoneNumber: '1234567890'
+    phoneNumber: '1234567890',
+    savedOrders: [
+      {
+        pizzas: [pizzas[1]._id]
+      }
+    ]
   });
 
   await User.create({

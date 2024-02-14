@@ -3,11 +3,11 @@ const { Schema, model } = mongoose;
 const OrderDetails = require("./OrderDetails")
 
 const orderSchema = new Schema({
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        //  required: true
-    },
+    // user: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     //  required: true
+    // },
     pizzas: [{ 
         type: Schema.Types.ObjectId, 
         ref: 'Pizza', 
@@ -15,13 +15,6 @@ const orderSchema = new Schema({
     status: {
         type: String,
         default: 'pending'
-    },
-    quantity: {
-        type: String,
-    },
-    totalAmount: {
-        type: Number,
-        // required: true
     },
     orderDate: {
         type: Date,
