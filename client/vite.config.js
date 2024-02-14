@@ -9,7 +9,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/graphql': {
-        target: 'http://localhost:3001',
+        target: 'https://api.render.com/deploy/srv-cn65252cn0vc73dam70g?key=bAiTciQ5hlo',
         secure: false,
         changeOrigin: true
       }
