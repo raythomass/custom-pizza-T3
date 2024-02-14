@@ -6,11 +6,16 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
-        _id
-        thoughtText
-        createdAt
-      }
+    }
+  }
+`;
+
+export const QUERY_PIZZAS = gql`
+  query pizzas {
+    pizza {
+      description
+      name
+      price
     }
   }
 `;

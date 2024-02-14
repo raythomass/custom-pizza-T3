@@ -32,8 +32,17 @@ const userSchema = new Schema({
     savedOrders: [Order.schema]
 });
 
+userSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+  
+    next();
+  });
+
 userSchema.methods.isCorrectPassword = async function (password) {
-    await bcrypt.compare(password, this.password);
+    return bcrypt.compare(password, this.password);
   };
 
 const User = mongoose.model('User', userSchema);

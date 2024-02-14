@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Builder</title>
+    <link rel="stylesheet" href="customization.css">
+</head>
+<body>
+    <header>
+        <h1>Customize Your Pizza</h1>
+    </header>
+    <main>
+        <section class="customization-option">
+            <h2>Crust</h2>
+            <select id="crust">
+                <option value="thin">Thin Crust</option>
+                <option value="thick">Thick Crust</option>
+                <option value="stuffed">Stuffed Crust</option>
+            </select>
+        </section>
+        <section class="customization-option">
+            <h2>Sauce</h2>
+            <select id="sauce">
+                <option value="tomato">Tomato Sauce</option>
+                <option value="bbq">BBQ Sauce</option>
+                <option value="pesto">Pesto Sauce</option>
+            </select>
+        </section>
+        <section class="customization-option">
+            <h2>Cheese</h2>
+            <select id="cheese">
+                <option value="mozzarella">Mozzarella</option>
+                <option value="cheddar">Cheddar</option>
+                <option value="parmesan">Parmesan</option>
+            </select>
+        </section>
+        <section class="customization-option">
+            <h2>Toppings</h2>
+            <input type="checkbox" id="pepperoni" value="Pepperoni">
+            <label for="pepperoni">Pepperoni</label><br>
+            <input type="checkbox" id="mushrooms" value="Mushrooms">
+            <label for="mushrooms">Mushrooms</label><br>
+            <input type="checkbox" id="onions" value="Onions">
+            <label for="onions">Onions</label><br>
+        </section>
+        <section class="preview">
+            <h2>Preview</h2>
+            <div id="pizza-preview">
+                <!-- Preview of the customized pizza will appear here -->
+            </div>
+        </section>
+        <button id="btn-add-to-cart">Add to Cart</button>
+    </main>
+
+    <script src="customization.js"></script>
+</body>
+</html>
