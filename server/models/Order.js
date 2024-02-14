@@ -10,7 +10,7 @@ const orderSchema = new Schema({
     },
     pizzas: [{ 
         type: Schema.Types.ObjectId, 
-        ref: 'Pizza', 
+        ref: 'Pizza',
     }],
     status: {
         type: String,

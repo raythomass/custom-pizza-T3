@@ -28,6 +28,7 @@ const Cart = () => {
                     {cart.map((pizza, index) => (
                         <div key={index} className="cart-item">
                             <h3>{pizza.name}</h3>
+                            <p>{pizza.description}</p>
                             <p>${pizza.price}</p>
                             <button onClick={() => removeFromCart(index)} className="btn-remove">Remove</button>
                         </div>

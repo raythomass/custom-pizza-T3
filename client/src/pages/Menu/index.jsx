@@ -37,7 +37,6 @@ function Menu() {
                         <h2>{pizza.name}</h2>
                         <p className="description">{pizza.description}</p>
                         <p className="price">${pizza.price}</p>
-                        <button className="btn-customize">Customize</button>
                         <button className="btn-add-to-cart" onClick={ () => addToCart(pizza)}>Add to Cart</button>
                     </section>
                 ))}
