@@ -36,7 +36,6 @@ const typeDefs = `
         order: [Order]
         me (_id: ID!): User
         savedOrder (id:ID!): Order
-        pizza: [Pizza]
     }
 
     type Mutation {

@@ -25,10 +25,6 @@ const resolvers = {
                 return await User.findById(args.id).populate('savedOrders')
             }
         },
-        pizza: async (parent, args, context) => {
-            console.log('here')
-            return await Pizza.find()
-        }
     },
     Mutation: {
         login: async (parent, { email, password }) => {
