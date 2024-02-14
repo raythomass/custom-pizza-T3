@@ -41,7 +41,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #121212;
 }
 
 .container {
@@ -51,7 +51,7 @@ body {
 }
 
 header {
-  background-color: #4caf50;
+  background-color: rgb(245, 59, 59);
   color: #fff;
   padding: 20px 0;
 }
@@ -71,7 +71,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: rgb(190, 190, 190);
   text-decoration: none;
   font-size: 18px;
 }
@@ -80,7 +80,7 @@ nav ul li a {
   background-image: url('pizza-banner.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: rgb(190, 190, 190);
   padding: 100px 0;
   text-align: center;
 }
@@ -92,7 +92,7 @@ nav ul li a {
 
 .link {
   display: inline-block;
-  background-color: #4caf50;
+  background-color: rgb(245, 59, 59);
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -104,7 +104,7 @@ nav ul li a {
 
 .btn {
   display: inline-block;
-  background-color: #ff5722;
+  background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -114,7 +114,7 @@ nav ul li a {
 }
 
 .btn:hover {
-  background-color: #f44336;
+  background-color: rgb(245, 59, 59);
 }
 
 .about, .menu, .contact {
@@ -130,6 +130,7 @@ nav ul li a {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: rgb(190, 190, 190);
 }
 
 footer {

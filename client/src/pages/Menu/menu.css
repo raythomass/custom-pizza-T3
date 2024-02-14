@@ -5,9 +5,10 @@
 }
 
 .menu-header {
-    background-color: #f8f8f8;
+    background-color: #121212;
     padding: 20px;
     text-align: center;
+    color: rgb(190, 190, 190);
 }
 
 .menu-header h1 {
