@@ -3,11 +3,11 @@
 const typeDefs = `
     type User {
         _id: ID
-        username: String
-        email: String
-        password: String
-        address: String
-        phoneNumber: String
+        username: String!
+        email: String!
+        password: String!
+        address: String!
+        phoneNumber: String!
         savedOrders: [Order]
     }
 
@@ -20,17 +20,9 @@ const typeDefs = `
 
     type Order {
         _id: ID
-        user: ID
         pizzas: [Pizza]
         status: String
-        quantity: String
-        totalAmount: Int
         orderDate: String
-    }
-
-    input PizzaType {
-        name: String
-        description: String
     }
 
     type Auth {
@@ -40,6 +32,7 @@ const typeDefs = `
 
     type Query {
         user: [User]
+        pizza: [Pizza]
         order: [Order]
         me (_id: ID!): User
         savedOrder (id:ID!): Order
@@ -66,8 +59,7 @@ const typeDefs = `
             phoneNumber: String!
         ): User
         addPizza(
-            name: String
-            description: String
+            pizzas: [ID]!
         ): Order
     }
 

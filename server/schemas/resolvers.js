@@ -6,6 +6,9 @@ const resolvers = {
         user: async (parent, args, context) => {
             return await User.find({}).populate('savedOrders')
         },
+        pizza: async (parent, args, context) => {
+            return await Pizza.find({})
+        },
         order: async (parent, args, context) => {
             return await Order.find({})
         },
@@ -60,13 +63,15 @@ const resolvers = {
         
               throw AuthenticationError;
         },
-        addPizza: async (parent, { name, description }, context) => {
-            const pizza = new Pizza({ name, description })
+        addPizza: async (parent, { pizzas }, context) => {
+            const order = new Order({ pizzas })
             console.log(pizza)
 
-            return await Order.create(
-                { $addToSet: {pizzas: pizza} }
-                )
+            await User.findByIdAndUpdate(context.user.id, {
+                $push: { savedOrders: order },
+              });
+
+            return order
         },
     }
 
