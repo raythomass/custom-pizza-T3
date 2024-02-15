@@ -3,6 +3,7 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
 }
 
 .header {
-    text-align: center;
+    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -25,10 +26,11 @@ body {
 }
 
 .confirmation-message {
-    background-color: #f0f7fa;
+    background-color: red;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 .confirmation-message h2 {
@@ -51,7 +53,7 @@ body {
 }
 
 .total-amount {
-    text-align: center;
+    align-items: center;
 }
 
 .total-amount p {
@@ -81,4 +83,8 @@ body {
 
 .btn-back:hover {
     background-color: #00796b;
+}
+
+#ordered-items {
+    list-style-position: inside;
 }

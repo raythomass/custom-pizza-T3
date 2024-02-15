@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <section className="hero">
           <div className="container">
-              <h2>Welcome to Custom Pizza</h2>
+              <h2>Welcome to Ray's Pizzaria</h2>
               <p>Experience the taste of perfection with our customized pizzas made just for you.</p>
               <a href="#menu" className="btn">Explore Menu</a>
           </div>

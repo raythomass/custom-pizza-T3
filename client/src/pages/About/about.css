@@ -2,6 +2,7 @@
 .team-member {
     text-align: center;
     margin-bottom: 20px;
+    color: rgb(190, 190, 190);
 }
 
 .team-member img {
@@ -23,4 +24,3 @@
     text-align: right;
     margin-top: 10px;
 }
-
