@@ -1,4 +1,5 @@
     
+    import './about.css'
     const AboutUs = () => {
         return (
             <body className="about-body">
@@ -39,6 +40,7 @@
                             </div>
                             {/* Add more testimonials as needed */}
                         </section>
+                        
                     </div>
             </main>
             </body>
