@@ -14,6 +14,7 @@ function Menu() {
 
     const pizzaItems = data?.pizza || [];
     
+    console.log(pizzaItems);
     const addToCart = (pizza) => {
         if (!Auth.loggedIn()) {
             window.alert('Please log in to add to cart');

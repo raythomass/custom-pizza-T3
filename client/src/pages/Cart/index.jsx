@@ -1,6 +1,5 @@
 import './cart.css'
 import { useStoreContext } from "../../utils/GlobalState";
-
 import { REMOVE_FROM_CART } from '../../utils/actions';
 
 const Cart = () => {
