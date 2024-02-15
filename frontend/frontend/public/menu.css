@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #f8f8f8;
+    background-color: #4caf50;
     padding: 20px;
     text-align: center;
 }
@@ -41,7 +41,7 @@ h2 {
 }
 
 .btn-customize, .btn-add-to-cart {
-    background-color: #4caf50;
+    background-color: red;
     color: white;
     padding: 10px 20px;
     border: none;

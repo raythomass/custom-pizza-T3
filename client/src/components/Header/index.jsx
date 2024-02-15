@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-          <h1>Custom Pizza</h1>
+          <h1>Ray's Pizzaria</h1>
           <nav>
               <ul>
                 <Link className='link btn-lg btn-info m-2' to='/'>Home</Link>
