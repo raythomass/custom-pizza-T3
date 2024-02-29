@@ -5,13 +5,13 @@ const Home = () => {
     <div>
       <section className="hero">
           <div className="container">
-              <h2>Welcome to Ray's Pizzaria</h2>
+              <h2>Welcome to Ray's Pizzeria</h2>
               <p>Experience the taste of perfection with our customized pizzas made just for you.</p>
               <a href="#menu" className="btn">Explore Menu</a>
           </div>
       </section>
 
-      <section id="about" className="about">
+      {/* <section id="about" className="about">
           <div className="container">
               <h2>About Us</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo mattis est, ac aliquam lacus aliquet vel. Sed maximus magna eu ipsum viverra, et faucibus leo consequat.</p>
@@ -34,7 +34,7 @@ const Home = () => {
               <Link to="/contact" className="btn">Get in Touch</Link>
               
           </div>
-      </section>
+      </section> */}
     </div>
   );
 };

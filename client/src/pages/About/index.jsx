@@ -12,12 +12,12 @@
                         <section className="team-members">
                             <h2>Meet Our Team</h2>
                             <div className="team-member" style={{color:"rgb(190, 190, 190)"}}>
-                                <img src="team-member1.jpg" alt="John" />
+                                {/* <img src="team-member1.jpg" alt="John" /> */}
                                 <h3>John</h3>
                                 <p>Founder & CEO</p>
                             </div>
                             <div className="team-member" style={{color:"rgb(190, 190, 190)"}}>
-                                <img src="team-member2.jpg" alt="Jane" />
+                                {/* <img src="team-member2.jpg" alt="Jane" /> */}
                                 <h3>Jane Smith</h3>
                                 <p>Head Chef</p>
                             </div>
@@ -35,7 +35,7 @@
                         <section className="testimonials">
                             <h2>Customer Testimonials</h2>
                             <div className="testimonial" style={{color:"rgb(190, 190, 190)"}}>
-                                <p> Foodie Express is amazing! The food is always fresh and delicious, and the delivery is super fast! </p>
+                                <p> Ray's Pizzeria is amazing! The food is always fresh and delicious, and the delivery is super fast! </p>
                                 <cite>- Sarah Johnson</cite>
                             </div>
                             {/* Add more testimonials as needed */}
