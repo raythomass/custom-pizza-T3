@@ -16,13 +16,13 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-          <h1>Ray's Pizzaria</h1>
+          <h1>Ray's Pizzeria</h1>
           <nav>
               <ul>
                 <Link className='link btn-lg btn-info m-2' to='/'>Home</Link>
                 <Link className='link btn-lg btn-info m-2' to='/menu'>Menu</Link>
                 <Link className='link btn-lg btn-info m-2' to='/about'>About</Link>
-                <Link className='link btn-lg btn-info m-2' to='/contact'>Contact Us</Link>
+                {/* <Link className='link btn-lg btn-info m-2' to='/contact'>Contact Us</Link> */}
                 {Auth.loggedIn() ? (
                   <button  onClick={logout} className='link btn-lg btn-info m-2'> Logout </button>
                 ) : (
